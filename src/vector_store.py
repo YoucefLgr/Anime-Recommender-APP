@@ -20,7 +20,7 @@ class VectorStoreBuilder:
         loader = CSVLoader(
             file_path = self.csv_path,
             encoding = "utf-8",
-            metadata = []
+            metadata_columns = []
         )
         data = loader.load()
 
