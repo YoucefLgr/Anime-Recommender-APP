@@ -12,7 +12,7 @@ def main():
     try:
         logger.info("Starting to build pipeline")
 
-        loader = AnimeDataLoader(original_csv="../data/anime_with_synopsis.csv", processed_csv="../data/anime_updated.csv")
+        loader = AnimeDataLoader(original_csv="data/anime_with_synopsis.csv", processed_csv="data/anime_updated.csv")
         processed_data = loader.load_and_process()
 
         logger.info("Data loaded and Processed...")
@@ -27,3 +27,7 @@ def main():
     except Exception as e:
         logger.error("Failed Building the pipeling ")
         raise CustomException("Error during Building Pipeline")
+    
+
+if __name__=="__main__":
+    main()
