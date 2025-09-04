@@ -11,7 +11,7 @@ class AnimeRecommender:
             llm = self.llm,
             chain_type = "stuff",
             retriever = retriever,
-            return_source_dcouments = True,
+            return_source_documents = True,
             chain_type_kwargs = {"prompt" : self.prompt}
         )
 
